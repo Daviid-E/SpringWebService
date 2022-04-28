@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sign Up</title>
+</head>
+<body>
+	<form action="#" th:action="@{/registration}" th:object="${user}" method="post">
+		<h1>Register!</h1>
+		<p>
+			<label for="fullName">Full Name</label>
+    		<input type="text" th:field="*{name}" id="fullName" placeholder="Name">
+		</p>
+    	
+  		<p>
+  			<label for="email">Email</label>
+    		<input type="text" th:field="*{username}" id="email" placeholder="Email">
+  		</p>
+    	
+    	<p>
+    		<label for="password">Password</label>
+    		<input type="password" th:field="*{password}" id="password" placeholder="Password">
+    	</p>
+    	
+    	<p>
+    		<label for="passwordConfirmation">Password</label>
+    		<input type="password" th:field="*{passwordConfirmation}" id="passwordConfirmation" placeholder="Confirm Password">
+    	</p>
+    	
+    	<input type="hidden" th:field="*{role}" id="role" value="ROLE_USER">
+    	
+    	
+    	<input type="submit" value="Submit!">   
+	</form>
+</body>
+</html>
